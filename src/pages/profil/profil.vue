@@ -61,19 +61,18 @@ export default {
               </RouterLink>
             </VCardItem>
           </VCol>
-
-
         
           <VDivider vertical />
 
           <!-- Right Column -->
           <VCol cols="9">
-            <Vcarditem>
+            <VCardItem>
               <VCardSubtitle
-                class="font-weight-bold"
+                class="font-weight-bold text-left mb-6"
               >
                 DETAIL
               </VCardSubtitle>
+          
               <VRow>
                 <VCol
                   cols="6"
@@ -141,7 +140,7 @@ export default {
                   />
                 </VCol>
               </VRow>
-            </Vcarditem>
+            </VCardItem>
           </VCol>
         </VRow>
       </VCard>

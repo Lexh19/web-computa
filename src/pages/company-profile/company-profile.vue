@@ -67,15 +67,13 @@ export default {
 
           <!-- Right Column -->
           <VCol cols="9">
-            <Vcarditem>
+            <VCardItem>
+              <VCardSubtitle
+                class="font-weight-bold text-left mb-6"
+              >
+                DETAIL
+              </VCardSubtitle>
               <VRow>
-                <VCardSubtitle
-                  class="font-weight-bold"
-                >
-                  DETAIL
-                </VCardSubtitle>
-         
-              
                 <VCol
                   cols="12"
                   md="12"
@@ -117,7 +115,7 @@ export default {
                   />
                 </VCol>
               </VRow>
-            </Vcarditem>
+            </VCardItem>
           </VCol>
         </VRow>
       </VCard>

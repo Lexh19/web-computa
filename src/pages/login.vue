@@ -30,9 +30,6 @@ const loginAction = async () => {
 }
 </script>
 
-
-
-
 <template>
   <VRow
     no-gutters

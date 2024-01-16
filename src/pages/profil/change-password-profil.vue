@@ -44,14 +44,14 @@
             />
           </VCol>
 
-          <Vcarditem>
-            <VCardText>
-              <VCardSubtitle>Persyaratan Password :</VCardSubtitle>
-              <P>Panjang minimum 8 karakter - semakin banyak, semakin baik</P>
-              <p>Setidaknya satu karakter huruf kecil</p>
-              <P>Setidaknya satu angka, simbol, atau karakter spasi</P>
-            </VCardText>
-          </Vcarditem>
+          <VCardItem>
+            <VCardTitle class="mb-5">
+              Persyaratan Password :
+            </VCardTitle>
+            <p>&#8226; Panjang minimum 8 karakter - semakin banyak, semakin baik</p>
+            <p> &#8226; Setidaknya satu karakter huruf kecil</p>
+            <p> &#8226; Setidaknya satu angka, simbol, atau karakter spasi</p>
+          </VCardItem>
 
           <div class="pa-md-3">
             <VRow>
