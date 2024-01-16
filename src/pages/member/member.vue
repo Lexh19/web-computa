@@ -101,12 +101,12 @@ watchEffect(async () => {
               <tr
                 style="height: 3.75rem;"
               >
-                <!-- 👉 Name -->
+                <!-- 👉 Nomer -->
                 <td>
                   <div class="d-flex align-center">
                     <div class="d-flex flex-column">
                       <h6 class="text-base">
-                        {{ data.name }}
+                        1
                       </h6>
                     </div>
                   </div>
@@ -114,22 +114,36 @@ watchEffect(async () => {
 
                 <!-- 👉 Nama Anggota -->
                 <td>
-                  <span class="text-capitalize text-base" />
+                  <div class="d-flex align-center">
+                    <VAvatar
+                      variant="tonal"
+                      class="me-3"
+                      size="38"
+                    >
+                      <VImg>{{ data.avatar }}</VImg>
+                    </VAvatar>
+
+                    <div class="d-flex flex-column">
+                      <span>{{ data.name }}</span>
+                    </div>
+                  </div>
                 </td>
 
                 <!-- 👉 No.hp -->
-                <td />
+                <td>
+                  <span class="text-capitalize text-base">{{ data.no_hp }} </span>
+                </td>
 
                 <!-- 👉 Email -->
                 <td>
-                  <span class="text-base" />
+                  <span class="text-base">{{ data.email }}</span>
                 </td>
 
                 <!-- 👉 Pekerjaan -->
-                <td />
+                <td><span class="text-capitalize text-base">{{ data.job_title }} </span></td>
 
                 <!-- 👉 Jabatan  -->
-                <td />
+                <td><span class="text-capitalize text-base">{{ data.job_grade }} </span></td>
 
                 <!-- 👉 Aksi  -->
                 <td

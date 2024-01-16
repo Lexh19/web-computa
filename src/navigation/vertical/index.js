@@ -22,7 +22,7 @@ export default [
   },
   {
     title: 'Profil',
-    to: { name: 'profil' },
+    to: { name: 'profil-profil' },
     icon: { icon: 'mingcute:user-1-line' },
   },
 ]
