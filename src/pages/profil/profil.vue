@@ -49,7 +49,7 @@ export default {
               </VCardTitle>
 
    
-              <RouterLink :to="{ name: 'company-profile-update-company-profile' }">
+              <RouterLink :to="{ name: 'profil-update-profil' }">
                 <VBtn
                   variant="flat"
                   size="large"
@@ -144,6 +144,13 @@ export default {
             </Vcarditem>
           </VCol>
         </VRow>
+      </VCard>
+    </VCol>
+    <VCol cols="12">
+      <VCard>
+        <VCardText>
+          <VCardTitle>Ubah Password</VCardTitle>
+        </VCardText>
       </VCard>
     </VCol>
   </VRow>

@@ -1,10 +1,12 @@
 <script setup>
-import { updateinstances } from "../../services/update-instances"
+import { updateprofil } from "../../services/update-profil"
 
 const name = ref()
-const phone = ref()
+const no_hp = ref()
 const email = ref()
-const address = ref()
+const job_title = ref()
+const job_grade = ref()
+const no_pegawai = ref()
 
 
 const updateAction = async () => {
@@ -13,12 +15,14 @@ const updateAction = async () => {
 
     const fomData =  new FormData()
 
-    fomData.append("nama perusahaan",name.value)
-    fomData.append("no.hp",phone.value)
+    fomData.append("nama ",name.value)
+    fomData.append("no.hp",no_hp.value)
     fomData.append("email",email.value)
-    fomData.append("alamat",address.value)
+    fomData.append("alamat",job_title.value)
+    fomData.append("email",job_grade.value)
+    fomData.append("alamat",no_pegawai.value)
 
-    const response = await updateinstances(fomData)
+    const response = await updateprofil(fomData)
 
     console.log(response.data.data)
     localStorage.setItem("userData",JSON.stringify( response.data.data))
@@ -32,7 +36,7 @@ const updateAction = async () => {
 <template>
   <VRow>
     <VCol>
-      <RouterLink to="company-profile">
+      <RouterLink to="profil">
         <VBtn
           variant="outlined"
         >
@@ -64,7 +68,7 @@ const updateAction = async () => {
                     class="text-none"
                     color="primary"
                   >
-                    Ganti foto
+                    Ganti foto profil
                   </VBtn>
                 </VCol>
                 <VCol cols="6">
@@ -88,9 +92,9 @@ const updateAction = async () => {
         <VCardText>
           <VFrom @submit.prevent="() => {}">
             <VRow>
-              <VCol cols="12">
+              <VCol cols="6">
                 <div class="text-subtitle-1 text-medium-emphasis">
-                  Nama Perusahaan
+                  Nama 
                 </div>
                 <VTextField 
                   v-model="name"
@@ -101,15 +105,48 @@ const updateAction = async () => {
         
               <VCol cols="6">
                 <div class="text-subtitle-1 text-medium-emphasis">
-                  No. HP
+                  No. Pegawai
                 </div>
                 <VTextField 
-                  v-model="phone"
+                  v-model="no_pegawai"
                   :rules="[requiredValidator]"
                 />
               </VCol>
 
          
+              <VCol cols="6">
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  Jabatan
+                </div>
+                <VTextField 
+                  v-model="job_title"
+                  :rules="[requiredValidator]"
+                />
+              </VCol>
+        
+
+              <VCol cols="6">
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  Pangkat
+                </div>
+                <VTextField 
+                  v-model="job_grade"
+                  :rules="[requiredValidator]"
+                />
+              </VCol>
+
+              
+              <VCol cols="6">
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  No. HP
+                </div>
+                <VTextField 
+                  v-model="no_hp"
+                  :rules="[requiredValidator]"
+                />
+              </VCol>
+        
+
               <VCol cols="6">
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Email
@@ -119,17 +156,7 @@ const updateAction = async () => {
                   :rules="[requiredValidator]"
                 />
               </VCol>
-        
 
-              <VCol cols="12">
-                <div class="text-subtitle-1 text-medium-emphasis">
-                  Alamat
-                </div>
-                <VTextField 
-                  v-model="address"
-                  :rules="[requiredValidator]"
-                />
-              </VCol>
 
               <div class="pa-md-3">
                 <VRow>
