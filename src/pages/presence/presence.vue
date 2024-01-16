@@ -26,6 +26,7 @@ const loadpageData = async () =>{
     const response2 = await getdate()
 
     indexData.value = response.data.data.data
+    console.log("indexdata:",indexData.value)
     dateData.value.months = response2.data.data.months 
     dateData.value.years = response2.data.data.years 
   } catch (error)
@@ -168,7 +169,7 @@ watchEffect(async () => {
           <span>Lihat detail</span>
           
           <a href="">
-            <VIcon 
+            <VIcon
               style="margin-left: 90;"
               color="warning"
               icon="mdi-arrow-right"

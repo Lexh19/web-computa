@@ -1,3 +1,34 @@
+<script setup>
+import { update } from "../../services/update-instances"
+
+const name = ref()
+const phone = ref()
+const email = ref()
+const address = ref()
+
+
+const updateAction = async () => {
+
+  try{
+
+    const fomData =  new FormData()
+
+    fomData.append("nama perusahaan",name.value)
+    fomData.append("no.hp",phone.value)
+    fomData.append("email",email.value)
+    fomData.append("alamat",address.value)
+
+    const response = await update(fomData)
+
+    console.log(response.data.data)
+    localStorage.setItem("userData",JSON.stringify( response.data.data))
+  } catch (error)
+  {
+    console.log(error)
+  }
+}
+</script>
+
 <template>
   <VRow>
     <VCol>
@@ -17,52 +48,54 @@
 
     <VCol cols="12">
       <VCard>
-        <VCol cols="12">
-          <Vcarditem>
-            <VCardTitle>Detail Profil Perusahaan</VCardTitle>
-          </Vcarditem>
-          <div class="pa-4 d-flex align-center">
-            <VImg
-              :max-width="100"
-              src="../src/assets/img/company-profil/Avatar.svg"
-            />
-            <div class="d-flex flex-column align-start">
-              <VCardItem>
-                <VRow>
-                  <VCol cols="6">
-                    <VBtn
-                      class="text-none"
-                      color="primary"
-                    >
-                      Ganti foto
-                    </VBtn>
-                  </VCol>
-                  <VCol cols="6">
-                    <VBtn
-                      class="text-none"
-                      color="secondary"
-                      variant="flat"
-                    >
-                      Reset
-                    </VBtn>
-                  </VCol>
-                </VRow>
-              </VCardItem>
-              <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
-            </div>
+        <Vcarditem>
+          <VCardTitle>Detail Profil Perusahaan</VCardTitle>
+        </Vcarditem>
+        <div class="pa-4 d-flex align-center">
+          <VImg
+            :max-width="100"
+            src="../src/assets/img/company-profil/Avatar.svg"
+          />
+          <div class="d-flex flex-column align-start">
+            <VCardItem>
+              <VRow>
+                <VCol cols="6">
+                  <VBtn
+                    class="text-none"
+                    color="primary"
+                  >
+                    Ganti foto
+                  </VBtn>
+                </VCol>
+                <VCol cols="6">
+                  <VBtn
+                    class="text-none"
+                    color="secondary"
+                    variant="flat"
+                  >
+                    Reset
+                  </VBtn>
+                </VCol>
+              </VRow>
+            </VCardItem>
+            <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
           </div>
+        </div>
 
         
-          
-          <VDivider />
+        <VDivider />
 
-          <VCardActions class="pa-md-6 mx-lg-auto">
+        <VCardText>
+          <VFrom @submit.prevent="() => {}">
             <VRow>
               <VCol cols="12">
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Nama Perusahaan
                 </div>
-                <VTextField />
+                <VTextField 
+                  v-model="name"
+                  :rules="[requiredValidator]"
+                />
               </VCol>
 
         
@@ -70,7 +103,10 @@
                 <div class="text-subtitle-1 text-medium-emphasis">
                   No. HP
                 </div>
-                <VTextField />
+                <VTextField 
+                  v-model="phone"
+                  :rules="[requiredValidator]"
+                />
               </VCol>
 
          
@@ -78,7 +114,10 @@
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Email
                 </div>
-                <VTextField />
+                <VTextField 
+                  v-model="email"
+                  :rules="[requiredValidator]"
+                />
               </VCol>
         
 
@@ -86,11 +125,39 @@
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Alamat
                 </div>
-                <VTextField />
+                <VTextField 
+                  v-model="address"
+                  :rules="[requiredValidator]"
+                />
               </VCol>
+
+              <div class="pa-md-3">
+                <VRow>
+                  <VCol cols="6">
+                    <VBtn
+                      class="text-none"
+                      color="primary"
+                      variant="flat"
+                      @click="updateAction"
+                    >
+                      Simpan
+                    </VBtn>
+                  </VCol>
+
+                  <VCol cols="6">
+                    <VBtn
+                      class="text-none"
+                      color="primary"
+                      variant="outlined"
+                    >
+                      Reset
+                    </VBtn>
+                  </VCol>
+                </VRow>
+              </div>
             </VRow>
-          </VCardActions>
-        </vcol>
+          </VFrom>
+        </VCardText>
       </VCard>
     </VCol>
   </VRow>

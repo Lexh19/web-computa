@@ -1,3 +1,27 @@
+<script setup>
+import { watchEffect } from "vue"
+import { getlistmember } from "../../services/member-list"
+
+const listmember = ref([])
+
+const loadpageData = async () =>{
+  try{
+    const response = await getlistmember()
+
+    listmember.value = response.data.data.data
+    console.log("listmember", listmember.value)
+  } catch (error)
+  {
+    console.log(error)
+  }
+}
+
+watchEffect(async () => {
+  await loadpageData()
+
+})
+</script>
+
 <template>
   <section>
     <VRow>
@@ -40,8 +64,8 @@
             </div>
           </VCardText>
 
-          <VDivider />
-          <VTable class="text-no-wrap">
+
+          <VTable class="text-no-wrap  pa-md-3">
             <!-- 👉 table head -->
             <thead>
               <tr>
@@ -70,7 +94,10 @@
             </thead>
 
             <!-- 👉 table body -->
-            <tbody>
+            <tbody
+              v-for="data in listmember"
+              :key="data.id"
+            >
               <tr
                 style="height: 3.75rem;"
               >
@@ -78,7 +105,9 @@
                 <td>
                   <div class="d-flex align-center">
                     <div class="d-flex flex-column">
-                      <h6 class="text-base" />
+                      <h6 class="text-base">
+                        {{ data.name }}
+                      </h6>
                     </div>
                   </div>
                 </td>
@@ -152,8 +181,7 @@
               </tr>
             </tfoot>
           </VTable>
-
-          <VDivider />
+          
 
           <VCardText class="d-flex align-center flex-wrap justify-space-between gap-4 py-3 px-5">
             <span class="text-sm text-disabled" />
@@ -174,6 +202,29 @@
 </template>
 
 <style lang="scss">
+/* Tambahkan gaya berikut untuk garis samping dan bawah pada tabel */
+.text-no-wrap {
+  border-collapse: separate; /* Use 'separate' instead of 'collapse' */
+  inline-size: 100%;
+}
+
+.text-no-wrap th,
+.text-no-wrap td {
+  border-block-end: 1px solid #ddd; /* Border at the bottom */
+  border-block-start: 1px solid #ddd; /* Border only at the top */
+  text-align: start;
+}
+
+.text-no-wrap th:first-child,
+.text-no-wrap td:first-child {
+  border-inline-start: 1px solid #ddd; /* Border only on the left for the first column */
+}
+
+.text-no-wrap th:last-child,
+.text-no-wrap td:last-child {
+  border-inline-end: 1px solid #ddd; /* Border only on the right for the last column */
+}
+
 .app-user-search-filter {
   inline-size: 31.6rem;
 }
