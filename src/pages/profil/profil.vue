@@ -79,7 +79,7 @@ export default {
                   cols="6"
                   md="6"
                 >
-                  <VLabel>Nama</VLabel>
+                  <VCardTitle>Nama</VCardTitle>
                   <VTextField
                     v-model="profilData.name"
                     variant="underlined"
@@ -90,7 +90,7 @@ export default {
                   cols="6"
                   md="6"
                 >
-                  <VLabel>No.Pegawai</VLabel>
+                  <VCardTitle>No.Pegawai</VCardTitle>
                   <VTextField
                     v-model="profilData.no_pegawai"
                     variant="underlined"
@@ -101,7 +101,7 @@ export default {
                   cols="6"
                   md="6"
                 >
-                  <VLabel>Jabatan</VLabel>
+                  <VCardTitle>Jabatan</VCardTitle>
                   <VTextField
                     v-model="profilData.job_title"
                     variant="underlined"
@@ -112,7 +112,7 @@ export default {
                   cols="6"
                   md="6"
                 >
-                  <VLabel>Pangkat</VLabel>
+                  <VCardTitle>Pangkat</VCardTitle>
                   <VTextField
                     v-model="profilData.job_grade"
                     variant="underlined"
@@ -123,7 +123,7 @@ export default {
                   cols="6"
                   md="6"
                 >
-                  <VLabel>No.HP</VLabel>
+                  <VCardTitle>No.HP</VCardTitle>
                   <VTextField
                     v-model="profilData.no_hp"
                     variant="underlined"
@@ -134,7 +134,7 @@ export default {
                   cols="6"
                   md="6"
                 >
-                  <VLabel>Email</VLabel>
+                  <VCardTitle>Email</VCardTitle>
                   <VTextField
                     v-model="profilData.email"
                     variant="underlined"

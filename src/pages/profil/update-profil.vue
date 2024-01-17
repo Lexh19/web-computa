@@ -65,9 +65,9 @@ const updateAction = async () => {
               <VRow>
                 <VCol cols="6">
                   <VBtn
-                
-                    class="text-none "
-                    variant="outlined"
+                    block
+                    variant="flat"
+                    class="text-none flex-grow-1"
                   >
                     Ganti foto profil
                   </VBtn>

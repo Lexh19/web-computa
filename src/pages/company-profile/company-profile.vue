@@ -69,7 +69,7 @@ export default {
           <VCol cols="9">
             <VCardItem>
               <VCardSubtitle
-                class="font-weight-bold text-left mb-6"
+                class="font-weight-bold text-left mb-4"
               >
                 DETAIL
               </VCardSubtitle>
@@ -78,7 +78,7 @@ export default {
                   cols="12"
                   md="12"
                 >
-                  <VLabel>Nama</VLabel>
+                  <VCardTitle>Nama</VCardTitle>
                   <VTextField
                     v-model="instancesData.name"
                     variant="underlined"
@@ -88,7 +88,7 @@ export default {
                   cols="12"
                   md="6"
                 >
-                  <VLabel>Email</VLabel>
+                  <VCardTitle>Email</VCardTitle>
                   <VTextField
                     v-model="instancesData.email"
                     variant="underlined"
@@ -98,7 +98,7 @@ export default {
                   cols="12"
                   md="6"
                 >
-                  <VLabel>Phone</VLabel>
+                  <VCardTitle>Phone</VCardTitle>
                   <VTextField
                     v-model="instancesData.phone"
                     variant="underlined"
@@ -108,7 +108,7 @@ export default {
                   cols="12"
                   md="12"
                 >
-                  <VLabel>Alamat</VLabel>
+                  <VCardTitle>Alamat</VCardTitle>
                   <VTextField
                     v-model="instancesData.address"
                     variant="underlined"

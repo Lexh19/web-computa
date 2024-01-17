@@ -61,6 +61,31 @@
                 rows="4"
               />
             </VCol>
+            
+            <div class="pa-md-3">
+              <VRow>
+                <VCol cols="6">
+                  <VBtn
+                    class="text-none"
+                    color="primary"
+                    variant="flat"
+                    @click="updateAction"
+                  >
+                    Simpan
+                  </VBtn>
+                </VCol>
+
+                <VCol cols="6">
+                  <VBtn
+                    class="text-none"
+                    color="primary"
+                    variant="outlined"
+                  >
+                    Reset
+                  </VBtn>
+                </VCol>
+              </VRow>
+            </div>
           </VRow>
         </VCardActions>
       </VCard>

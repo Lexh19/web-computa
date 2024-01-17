@@ -53,7 +53,10 @@ watchEffect(async () => {
     >
       <VCard>
         <div class="card-content">
-          <VIcon icon="ph:list-checks-bold" />
+          <VIcon 
+            color="primary"
+            icon="ph:list-checks-bold"
+          />
           <VCardItem>
             <VCardTitle>
               Daftar presensi

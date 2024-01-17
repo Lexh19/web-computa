@@ -120,7 +120,7 @@ watchEffect(async () => {
                       class="me-3"
                       size="38"
                     >
-                      <VImg>{{ data.avatar }}</VImg>
+                      <VImg :src="data.avatar" />
                     </VAvatar>
 
                     <div class="d-flex flex-column">
@@ -169,6 +169,7 @@ watchEffect(async () => {
                     variant="text"
                   >
                     <VIcon
+                      color="warning"
                       size="22"
                       icon="tabler-trash"
                     />

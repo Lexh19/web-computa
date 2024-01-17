@@ -86,26 +86,24 @@
                 </VBtn>
               </VCol>
 
-              <VRow class="text-center">
-                <VCol
-                  cols="12"
-                  class="d-flex align-center justify-center"
+              
+              <VCol
+                cols="12"
+                class="d-flex align-center justify-center"
+              >
+                <RouterLink
+                  :to="{ name: 'login' }"
                 >
-                  <RouterLink
-                    class="text-primary ms-2"
-                    :to="{ name: 'login' }"
-                  >
-                    <span class="d-flex align-items-center">
-                      <VImg
-                        class="ms-2"
-                        :max-width="20"
-                        src="../src/assets/img/compenents/arrow-left.svg"
-                      />
-                      <span class="ms-2">Kembali ke Halaman Masuk</span>
-                    </span>
-                  </RouterLink>
-                </VCol>
-              </VRow>
+                  <div class="flex items-center gap-2">
+                    <VIcon
+                      color="primery"
+                      icon="material-symbols:chevron-left"
+                      start
+                    />
+                    <span>Kembali ke Halaman Masuk</span>
+                  </div>
+                </RouterLink>
+              </VCol>
             </VRow>
           </VForm>
         </VCardText>
@@ -117,6 +115,17 @@
 <style lang="scss">
 @use "@core/scss/template/pages/page-auth.scss";
 
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.ms-2 {
+  margin-inline-start: 0.5rem; /* Sesuaikan margin sesuai kebutuhan Anda */
+}
 </style>
 
 <route lang="yaml">

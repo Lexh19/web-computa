@@ -59,18 +59,19 @@
 
               <VCol
                 cols="12"
+                class="d-flex align-center justify-center"
               >
                 <RouterLink
                   :to="{ name: 'login' }"
                 >
-                  <span class="d-flex align-items-center">
-                    <VImg
-                      class="mr-2"
-                      :max-width="20"
-                      src="../src/assets/img/compenents/arrow-left.svg"
+                  <div class="flex items-center gap-2">
+                    <VIcon
+                      color="primery"
+                      icon="material-symbols:chevron-left"
+                      start
                     />
-                    Kembali ke Halaman Masuk
-                  </span>
+                    <span>Kembali ke Halaman Masuk</span>
+                  </div>
                 </RouterLink>
               </VCol>
             </VRow>
