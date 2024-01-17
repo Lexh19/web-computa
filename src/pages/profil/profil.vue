@@ -51,10 +51,11 @@ export default {
    
               <RouterLink :to="{ name: 'profil-update-profil' }">
                 <VBtn
+                  
                   variant="flat"
                   size="large"
                   prepend-icon="tabler:edit"
-                  class="mx-auto mt-3"
+                  class="mx-auto mt-3 text-none"
                 >
                   Edit Profil
                 </VBtn>
@@ -147,9 +148,18 @@ export default {
     </VCol>
     <VCol cols="12">
       <VCard>
-        <VCardText>
-          <VCardTitle>Ubah Password</VCardTitle>
-        </VCardText>
+        <VCardItem>
+          <VCardText>
+            <VCardTitle>Ubah Password</VCardTitle>
+          </VCardText>
+        
+          <VBtn 
+            class="text-none"
+            color="warning"
+          >
+            Ubah Password
+          </VBtn>
+        </VCardItem>
       </VCard>
     </VCol>
   </VRow>

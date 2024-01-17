@@ -12,7 +12,7 @@
         <div class="d-flex align-center justify-center w-100 h-100">
           <VImg
             :max-width="600"
-            src="../assets/img/login/reset-password.svg"
+            src="../src/assets/img/login/resetpassword.svg"
             class="auth-illustration mt-16 mb-2"
           />
         </div>

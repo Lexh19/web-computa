@@ -46,14 +46,14 @@ const updateAction = async () => {
         </VBtn>
       </RouterLink>
       <VText style="margin-left: 10px;">
-        Profil Perusahaan / <span class="font-weight-bold">  Update Profil  Perusahaan</span>
+        Daftar Anggota /<span class="font-weight-bold">  Tambah Data Anggota</span>
       </VText>
     </VCol>
 
     <VCol cols="12">
       <VCard>
         <Vcarditem>
-          <VCardTitle>Detail Profil Perusahaan</VCardTitle>
+          <VCardTitle>Data Anggota</VCardTitle>
         </Vcarditem>
         <div class="pa-4 d-flex align-center">
           <VImg
@@ -65,8 +65,9 @@ const updateAction = async () => {
               <VRow>
                 <VCol cols="6">
                   <VBtn
-                    class="text-none"
-                    color="primary"
+                
+                    class="text-none "
+                    variant="outlined"
                   >
                     Ganti foto profil
                   </VBtn>
