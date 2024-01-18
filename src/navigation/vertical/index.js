@@ -17,7 +17,7 @@ export default [
   },
   {
     title: 'Anggota',
-    to: { name: 'member-member' },
+    to: { name: 'member-member' }, 
     icon: { icon: 'mingcute:user-1-line' },
   },
   {

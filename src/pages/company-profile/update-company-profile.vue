@@ -1,10 +1,10 @@
 <script setup>
 import { updateinstances } from "../../services/update-instances"
 
-const name = ref()
-const phone = ref()
-const email = ref()
-const address = ref()
+const name = ref('')
+const phone = ref('')
+const email = ref('')
+const address = ref('')
 
 
 const updateAction = async () => {
@@ -13,10 +13,7 @@ const updateAction = async () => {
 
     const fomData =  new FormData()
 
-    fomData.append("nama perusahaan",name.value)
-    fomData.append("no.hp",phone.value)
-    fomData.append("email",email.value)
-    fomData.append("alamat",address.value)
+    
 
     const response = await updateinstances(fomData)
 

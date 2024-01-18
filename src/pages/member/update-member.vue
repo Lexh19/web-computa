@@ -28,16 +28,17 @@
           <div class="d-flex flex-column align-start">
             <VCardItem>
               <VRow>
-                <VCol cols="6">
+                <VCol cols="8">
                   <VBtn
+                    block
                     class="text-none"
                     color="primary"
                     variant="outlined"
                   >
-                    Upload foto baru
+                    Upload foto baru    
                   </VBtn>
                 </VCol>
-                <VCol cols="6">
+                <VCol cols="4">
                   <VBtn
                     class="text-none"
                     color="secondary"

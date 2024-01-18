@@ -105,9 +105,7 @@ watchEffect(async () => {
                 <td>
                   <div class="d-flex align-center">
                     <div class="d-flex flex-column">
-                      <h6 class="text-base">
-                        1
-                      </h6>
+                      <h6 class="text-base" />
                     </div>
                   </div>
                 </td>
