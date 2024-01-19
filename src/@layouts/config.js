@@ -20,7 +20,7 @@ export const config = {
   footer: { type: ref(FooterType.Static) },
   verticalNav: {
     isVerticalNavCollapsed: ref(false),
-    defaultNavItemIconProps: { icon: 'tabler:indent-decrease' },
+    defaultNavItemIconProps: { icon: 'tabler:indent-increase' },
   },
   horizontalNav: {
     type: ref('sticky'),
@@ -29,8 +29,8 @@ export const config = {
     chevronDown: { icon: 'tabler-chevron-down' },
     chevronRight: { icon: 'tabler-chevron-right' },
     close: { icon: 'tabler-x' },
-    verticalNavPinned: { icon: 'tabler:indent-decrease' },
-    verticalNavUnPinned: { icon: 'tabler-circle' },
+    verticalNavPinned: { icon: ' tabler:indent-decrease ' },
+    verticalNavUnPinned: { icon: ' tabler:indent-increase ' },
     sectionTitlePlaceholder: { icon: 'tabler-minus' },
   },
 }
