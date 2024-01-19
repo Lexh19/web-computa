@@ -28,7 +28,8 @@ export const { themeConfig, layoutConfig } = defineThemeConfig({
   footer: { type: FooterType.Static },
   verticalNav: {
     isVerticalNavCollapsed: false,
-    defaultNavItemIconProps: { icon: 'tabler:indent-increase', size: 10 },
+    defaultNavItemIconProps: { 
+      icon: 'tabler:indent-increase', size: 10 ,  color: "primary"   },
     isVerticalNavSemiDark: false,
   },
   horizontalNav: {
@@ -36,11 +37,11 @@ export const { themeConfig, layoutConfig } = defineThemeConfig({
     transition: 'slide-y-reverse-transition',
   },
   icons: {
-    chevronDown: { icon: 'tabler-chevron-down' },
-    chevronRight: { icon: 'tabler-chevron-right' },
-    close: { icon: 'tabler-x' },
-    verticalNavPinned: { icon: ' tabler:indent-decrease ' },
-    verticalNavUnPinned: { icon: ' tabler:indent-increase ' },
-    sectionTitlePlaceholder: { icon: 'tabler-minus' },
+    chevronDown: { icon: 'tabler-chevron-down' , color: "primary" },
+    chevronRight: { icon: 'tabler-chevron-right', color: "primary" },
+    close: { icon: 'tabler-x' , color: "primary" },
+    verticalNavPinned: { icon: ' tabler:indent-decrease ', color: "primary" },
+    verticalNavUnPinned: { icon: ' tabler:indent-increase ', color: "primary" },
+    sectionTitlePlaceholder: { icon: 'tabler-minus' , color: "primary" },
   },
 })
