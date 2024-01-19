@@ -152,13 +152,15 @@ export default {
           <VCardText>
             <VCardTitle>Ubah Password</VCardTitle>
           </VCardText>
-        
-          <VBtn 
-            class="text-none"
-            color="warning"
-          >
-            Ubah Password
-          </VBtn>
+
+          <RouterLink :to="{ name: 'profil-change-password' }">
+            <VBtn 
+              class="text-none"
+              color="warning"
+            >
+              Ubah Password
+            </VBtn>
+          </RouterLink>
         </VCardItem>
       </VCard>
     </VCol>
