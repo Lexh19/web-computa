@@ -89,45 +89,49 @@ const handleNavScroll = evt => {
     <!-- 👉 Header -->
     <div class="nav-header">
       <slot name="nav-header">
-        <div class="logo">
-          <RouterLink
-            to="/"
-            class="app-logo " 
-          >
-            <VImg
-              src="../src/assets/img/logo/image1.svg"
-              alt="Logo"
-              class="logo-image"
-            />
-          </RouterLink>
-        </div>
+        <VRow class="center">
+          <VCol class="logo">
+            <RouterLink
+              to="/"
+              class="app-logo"
+            >
+              <VImg
+                src="../src/assets/img/logo/image1.svg"
+                alt="Logo"
+                class="logo-image"
+              />
+            </RouterLink>
+          </VCol>
         
-        <!-- 👉 Vertical nav actions -->
-        <!-- Show toggle collapsible in >md and close button in <md -->
-        <template v-if="!isLessThanOverlayNavBreakpoint(windowWidth)">
-          <Component
-            :is="config.app.iconRenderer || 'div'"
-            v-show="isCollapsed && !hideTitleAndIcon"
-            class="header-action"
-            v-bind="config.icons.verticalNavUnPinned"
-            @click="isCollapsed = !isCollapsed"
-          />
-          <Component
-            :is="config.app.iconRenderer || 'div'"
-            v-show="!isCollapsed && !hideTitleAndIcon"
-            class="header-action"
-            v-bind="config.icons.verticalNavPinned"
-            @click="isCollapsed = !isCollapsed"
-          />
-        </template>
-        <template v-else>
-          <Component
-            :is="config.app.iconRenderer || 'div'"
-            class="header-action"
-            v-bind="config.icons.close"
-            @click="toggleIsOverlayNavActive(false)"
-          />
-        </template>
+          <!-- 👉 Vertical nav actions -->
+          <!-- Show toggle collapsible in >md and close button in <md -->
+          <VCol class="header-actions">
+            <template v-if="!isLessThanOverlayNavBreakpoint(windowWidth)">
+              <Component
+                :is="config.app.iconRenderer || 'div'"
+                v-show="isCollapsed && !hideTitleAndIcon"
+                class="header-action"
+                v-bind="config.icons.verticalNavUnPinned"
+                @click="isCollapsed = !isCollapsed"
+              />
+              <Component
+                :is="config.app.iconRenderer || 'div'"
+                v-show="!isCollapsed && !hideTitleAndIcon"
+                class="header-action"
+                v-bind="config.icons.verticalNavPinned"
+                @click="isCollapsed = !isCollapsed"
+              />
+            </template>
+            <template v-else>
+              <Component
+                :is="config.app.iconRenderer || 'div'"
+                class="header-action"
+                v-bind="config.icons.close"
+                @click="toggleIsOverlayNavActive(false)"
+              />
+            </template>
+          </VCol>
+        </VRow>
       </slot>
     </div>
     <slot name="before-nav-items">
@@ -225,6 +229,13 @@ const handleNavScroll = evt => {
       }
     }
   }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; // Align items to the right
+  cursor: pointer;
 }
 
 .logo {

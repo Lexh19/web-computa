@@ -27,6 +27,7 @@ const loadpageData = async () =>{
 
     indexData.value = response.data.data.data
     console.log("indexdata:",indexData.value)
+
     dateData.value.months = response2.data.data.months 
     dateData.value.years = response2.data.data.years 
   } catch (error)
@@ -171,7 +172,7 @@ watchEffect(async () => {
         <VCardText style="color: #d51f27;">
           <span>Lihat detail</span>
           
-          <a href="">
+          <a>
             <VIcon
               style="margin-left: 90;"
               color="warning"

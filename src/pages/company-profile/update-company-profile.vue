@@ -5,23 +5,21 @@ const name = ref('')
 const phone = ref('')
 const email = ref('')
 const address = ref('')
-
+const fomData = new FormData() 
 
 const updateAction = async () => {
-
-  try{
-
-    const fomData =  new FormData()
-
+  try {
+    fomData.append('name', name.value)
+    fomData.append('phone', phone.value)
+    fomData.append('email', email.value)
+    fomData.append('address', address.value)
     
-
     const response = await updateinstances(fomData)
 
     console.log(response.data.data)
-    localStorage.setItem("userData",JSON.stringify( response.data.data))
-  } catch (error)
-  {
-    console.log(error)
+    localStorage.setItem("userData", JSON.stringify(response.data.data))
+  } catch (error) {
+    console.error(error)
   }
 }
 </script>
@@ -83,7 +81,7 @@ const updateAction = async () => {
         <VDivider />
 
         <VCardText>
-          <VFrom @submit.prevent="() => {}">
+          <VFrom @submit.prevent="submitForm">
             <VRow>
               <VCol cols="12">
                 <div class="text-subtitle-1 text-medium-emphasis">

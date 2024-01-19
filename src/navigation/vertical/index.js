@@ -9,7 +9,6 @@ export default [
     to: { name:'presence-presence' },
     icon: { icon: 'ph:list-checks-bold' },
   },
-  
   {
     title: 'Profil Perusahaan',
     to: { name: 'company-profile-company-profile' },
