@@ -15,126 +15,158 @@
       </VText>
     </VCol>
 
-    <VCol cols="12">
+    <VCol
+      cols="12"
+      md="12"
+      lg="12"
+    >
       <VCard>
-        <Vcarditem>
-          <VCardTitle>Data Anggota</VCardTitle>
-        </Vcarditem>
-        <div class="pa-4 d-flex align-center">
-          <VImg
-            :max-width="100"
-            src="../src/assets/img/company-profil/Avatar.svg"
-          />
-          <div class="d-flex flex-column align-start">
-            <VCardItem>
-              <VRow>
-                <VCol cols="8">
-                  <VBtn
-                    block
-                    class="text-none"
-                    color="primary"
-                    variant="outlined"
-                  >
-                    Upload foto baru    
-                  </VBtn>
-                </VCol>
-                <VCol cols="4">
-                  <VBtn
-                    class="text-none"
-                    color="secondary"
-                    variant="flat"
-                  >
-                    Reset
-                  </VBtn>
-                </VCol>
-              </VRow>
-            </VCardItem>
-            <VCardText>Uploud foto format jpg/png maks. 800kb</VCardText>
+        <VCardItem class="pa-md-3">
+          <VCardTitle class="ml-3">
+            Data Anggota
+          </VCardTitle>
+       
+          <div class="pa-4 d-flex align-center">
+            <VImg
+              :max-width="100"
+              src="../src/assets/img/company-profil/Avatar.svg"
+            />
+            <div class="d-flex flex-column align-start">
+              <VCardItem>
+                <VRow>
+                  <VCol cols="8">
+                    <VBtn
+                      block
+                      class="text-none"
+                      color="primary"
+                      variant="outlined"
+                    >
+                      Upload foto baru    
+                    </VBtn>
+                  </VCol>
+                  <VCol cols="4">
+                    <VBtn
+                      class="text-none"
+                      color="secondary"
+                      variant="flat"
+                    >
+                      Reset
+                    </VBtn>
+                  </VCol>
+                </VRow>
+              </VCardItem>
+              <VCardText>Uploud foto format jpg/png maks. 800kb</VCardText>
+            </div>
           </div>
-        </div>
-
+        </VCardItem>
         
           
         <VDivider />
 
-        <VCardItem class="pa-md-6 mx-lg-auto">
-          <VRow>
-            <VCol cols="6">
-              <div class="text-subtitle-1 text-medium-emphasis">
-                Nama
-              </div>
-              <VTextField />
-            </VCol>
+        <VCardItem>
+          <VFrom @submit.prevent="submitForm">
+            <VRow>
+              <VCol
+                cols="12"
+                sm="6"
+              >
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  Nama
+                </div>
+                <VTextField />
+              </VCol>
 
         
-            <VCol cols="6">
-              <div class="text-subtitle-1 text-medium-emphasis">
-                Email
-              </div>
-              <VTextField />
-            </VCol>
+              <VCol
+                cols="12"
+                sm="6"
+              >
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  Email
+                </div>
+                <VTextField />
+              </VCol>
 
          
-            <VCol cols="12">
-              <div class="text-subtitle-1 text-medium-emphasis">
-                No. HP
-              </div>
-              <VTextField />
-            </VCol>
+              <VCol cols="12">
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  No. HP
+                </div>
+                <VTextField />
+              </VCol>
         
 
-            <VCol cols="6">
-              <div class="text-subtitle-1 text-medium-emphasis">
-                Password
-              </div>
-              <VTextField />
-            </VCol>
+              <VCol
+                cols="12"
+                sm="6"
+              >
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  Password
+                </div>
+                <VTextField />
+              </VCol>
 
-            <VCol cols="6">
-              <div class="text-subtitle-1 text-medium-emphasis">
-                No. Pegawai
-              </div>
-              <VTextField />
-            </VCol>
+              <VCol
+                cols="12"
+                sm="6"
+              >
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  No. Pegawai
+                </div>
+                <VTextField />
+              </VCol>
 
-            <VCol cols="6">
-              <div class="text-subtitle-1 text-medium-emphasis">
-                Pekerjaan
-              </div>
-              <VTextField />
-            </VCol>
+              <VCol
+                cols="12"
+                sm="6"
+              >
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  Pekerjaan
+                </div>
+                <VTextField />
+              </VCol>
 
-            <VCol cols="6">
-              <div class="text-subtitle-1 text-medium-emphasis">
-                Jabatan
-              </div>
-              <VTextField />
-            </VCol>
+              <VCol
+                cols="12"
+                sm="6"
+              >
+                <div class="text-subtitle-1 text-medium-emphasis">
+                  Jabatan
+                </div>
+                <VTextField />
+              </VCol>
 
-            <div class="pa-md-3">
-              <VRow>
-                <VCol cols="6">
-                  <VBtn
-                    class="text-none"
-                    color="primary"
-                    variant="flat"
+              <div class="pa-md-3">
+                <VRow>
+                  <VCol
+                    cols="12"
+                    sm="6"
                   >
-                    Simpan
-                  </VBtn>
-                </VCol>
+                    <VBtn
+                      class="text-none"
+                      color="primary"
+                      variant="flat"
+                    >
+                      Simpan
+                    </VBtn>
+                  </VCol>
 
-                <VCol cols="6">
-                  <VBtn
-                    class="text-none"
-                    color="primary"
-                    variant="outlined"
+                  <VCol
+                    cols="12"
+                    sm="6"
                   >
-                    Reset
-                  </VBtn>
-                </VCol>
-              </VRow>
-            </div>
-          </VRow>
+                    <VBtn
+                      class="text-none"
+                      color="primary"
+                      variant="outlined"
+                    >
+                      Reset
+                    </VBtn>
+                  </VCol>
+                </VRow>
+              </div>
+            </VRow>
+          </VFrom>
         </VCardItem>
       </VCard>
     </VCol>

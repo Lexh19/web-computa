@@ -31,11 +31,14 @@ export default {
 
 <template>
   <VRow>
-    <VCol cols="12">
+    <VCol cols="md-12">
       <VCard style="padding: 40px;">
         <VRow>
           <!-- Left Column -->
-          <VCol cols="3">
+          <VCol
+            cols="12"
+            md="3"
+          >
             <VCardItem class="text-center">
               <VImg
                 :max-width="100"
@@ -66,7 +69,10 @@ export default {
           <VDivider vertical />
 
           <!-- Right Column -->
-          <VCol cols="9">
+          <VCol
+            cols="12"
+            md="9"
+          >
             <VCardItem>
               <VCardSubtitle
                 class="font-weight-bold text-left mb-4"

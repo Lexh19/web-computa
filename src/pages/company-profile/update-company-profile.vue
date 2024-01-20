@@ -41,46 +41,52 @@ const updateAction = async () => {
       </VText>
     </VCol>
 
-    <VCol cols="12">
+    <VCol
+      cols="12"
+      md="12"
+      lg="12"
+    >
       <VCard>
-        <Vcarditem>
-          <VCardTitle>Detail Profil Perusahaan</VCardTitle>
-        </Vcarditem>
-        <div class="pa-4 d-flex align-center">
-          <VImg
-            :max-width="100"
-            src="../src/assets/img/company-profil/Avatar.svg"
-          />
-          <div class="d-flex flex-column align-start">
-            <VCardItem>
-              <VRow>
-                <VCol cols="6">
-                  <VBtn
-                    class="text-none"
-                    color="primary"
-                  >
-                    Ganti foto
-                  </VBtn>
-                </VCol>
-                <VCol cols="6">
-                  <VBtn
-                    class="text-none"
-                    color="secondary"
-                    variant="flat"
-                  >
-                    Reset
-                  </VBtn>
-                </VCol>
-              </VRow>
-            </VCardItem>
-            <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
+        <VCardItem class="pa-md-3">
+          <VCardTitle class="ml-3">
+            Detail Profil Perusahaan
+          </VCardTitle>
+          <div class="pa-4 d-flex align-center">
+            <VImg
+              :max-width="100"
+              src="../src/assets/img/company-profil/Avatar.svg"
+            />
+            <div class="d-flex flex-column align-start">
+              <VCardItem>
+                <VRow>
+                  <VCol cols="6">
+                    <VBtn
+                      class="text-none"
+                      color="primary"
+                    >
+                      Ganti foto
+                    </VBtn>
+                  </VCol>
+                  <VCol cols="6">
+                    <VBtn
+                      class="text-none"
+                      color="secondary"
+                      variant="flat"
+                    >
+                      Reset
+                    </VBtn>
+                  </VCol>
+                </VRow>
+              </VCardItem>
+              <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
+            </div>
           </div>
-        </div>
+        </VCardItem>
 
         
         <VDivider />
 
-        <VCardText>
+        <VCardItem>
           <VFrom @submit.prevent="submitForm">
             <VRow>
               <VCol cols="12">
@@ -94,7 +100,10 @@ const updateAction = async () => {
               </VCol>
 
         
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                sm="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   No. HP
                 </div>
@@ -105,7 +114,10 @@ const updateAction = async () => {
               </VCol>
 
          
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                sm="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Email
                 </div>
@@ -116,7 +128,9 @@ const updateAction = async () => {
               </VCol>
         
 
-              <VCol cols="12">
+              <VCol
+                cols="12"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Alamat
                 </div>
@@ -128,7 +142,10 @@ const updateAction = async () => {
 
               <div class="pa-md-3">
                 <VRow>
-                  <VCol cols="6">
+                  <VCol
+                    cols="12"
+                    sm="6"
+                  >
                     <VBtn
                       class="text-none"
                       color="primary"
@@ -139,7 +156,10 @@ const updateAction = async () => {
                     </VBtn>
                   </VCol>
 
-                  <VCol cols="6">
+                  <VCol
+                    cols="12"
+                    sm="6"
+                  >
                     <VBtn
                       class="text-none"
                       color="primary"
@@ -152,7 +172,7 @@ const updateAction = async () => {
               </div>
             </VRow>
           </VFrom>
-        </VCardText>
+        </VCardItem>
       </VCard>
     </VCol>
   </VRow>
