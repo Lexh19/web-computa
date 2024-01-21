@@ -11,7 +11,7 @@ export default [
   },
   {
     title: 'Profil Perusahaan',
-    to: { name: 'company-profile-company-profile' },
+    to: { name: 'company-company-profile' },
     icon: { icon: 'ri:building-4-line' },
   },
   {

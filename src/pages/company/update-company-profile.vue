@@ -1,10 +1,10 @@
 <script setup>
-import { updateinstances } from "../../services/update-instances"
+import { updateinstances } from "../../services/update-instances";
 
-const name = ref('')
-const phone = ref('')
-const email = ref('')
-const address = ref('')
+const name = ref()
+const phone = ref()
+const email = ref()
+const address = ref()
 const fomData = new FormData() 
 
 const updateAction = async () => {

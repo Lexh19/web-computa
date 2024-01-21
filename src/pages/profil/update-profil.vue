@@ -25,7 +25,7 @@ const updateAction = async () => {
     const response = await updateprofil(fomData)
 
     console.log(response.data.data)
-    localStorage.setItem("userData",JSON.stringify( response.data.data))
+    
   } catch (error)
   {
     console.log(error)

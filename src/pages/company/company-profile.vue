@@ -51,7 +51,7 @@ export default {
               </VCardTitle>
 
    
-              <RouterLink :to="{ name: 'company-profile-update-company-profile' }">
+              <RouterLink :to="{ name: 'company-update-company-profile' }">
                 <VBtn
                   variant="flat"
                   size="large"
