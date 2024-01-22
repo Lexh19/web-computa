@@ -32,11 +32,14 @@ export default {
 
 <template>
   <VRow>
-    <VCol cols="12">
+    <VCol cols="md-12">
       <VCard style="padding: 40px;">
         <VRow>
           <!-- Left Column -->
-          <VCol cols="3">
+          <VCol
+            cols="12"
+            md="3"
+          >
             <VCardItem class="text-center">
               <VImg
                 :max-width="100"
@@ -63,10 +66,16 @@ export default {
             </VCardItem>
           </VCol>
         
-          <VDivider vertical />
+          <VDivider
+            vertical
+            class="hidden-md-and-down"
+          />
 
           <!-- Right Column -->
-          <VCol cols="9">
+          <VCol
+            cols="12"
+            md="9"
+          >
             <VCardItem>
               <VCardSubtitle
                 class="font-weight-bold text-left mb-6"
@@ -76,7 +85,7 @@ export default {
           
               <VRow>
                 <VCol
-                  cols="6"
+                  cols="12"
                   md="6"
                 >
                   <VCardTitle>Nama</VCardTitle>
@@ -87,7 +96,7 @@ export default {
                 </VCol>
 
                 <VCol
-                  cols="6"
+                  cols="12"
                   md="6"
                 >
                   <VCardTitle>No.Pegawai</VCardTitle>
@@ -98,7 +107,7 @@ export default {
                 </VCol>
 
                 <VCol
-                  cols="6"
+                  cols="12"
                   md="6"
                 >
                   <VCardTitle>Jabatan</VCardTitle>
@@ -109,7 +118,7 @@ export default {
                 </VCol>
 
                 <VCol
-                  cols="6"
+                  cols="12"
                   md="6"
                 >
                   <VCardTitle>Pangkat</VCardTitle>
@@ -120,7 +129,7 @@ export default {
                 </VCol>
 
                 <VCol
-                  cols="6"
+                  cols="12"
                   md="6"
                 >
                   <VCardTitle>No.HP</VCardTitle>
@@ -131,7 +140,7 @@ export default {
                 </VCol>
 
                 <VCol
-                  cols="6"
+                  cols="12"
                   md="6"
                 >
                   <VCardTitle>Email</VCardTitle>

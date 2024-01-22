@@ -1,5 +1,5 @@
 <script setup>
-import { updateinstances } from "../../services/update-instances";
+import { updateinstances } from "../../services/update-instances"
 
 const name = ref()
 const phone = ref()
@@ -51,7 +51,7 @@ const updateAction = async () => {
           <VCardTitle class="ml-3">
             Detail Profil Perusahaan
           </VCardTitle>
-          <div class="pa-4 d-flex align-center">
+          <div class="pa-4 d-flex align-center d-sm-flex">
             <VImg
               :max-width="100"
               src="../src/assets/img/company-profil/Avatar.svg"

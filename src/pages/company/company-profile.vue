@@ -12,6 +12,7 @@ export default {
         const response = await getprofilinstances()
 
         instancesData.value = response.data.data
+      
       }
       catch (error) {
         console.log(error)
@@ -66,7 +67,10 @@ export default {
 
 
         
-          <VDivider vertical />
+          <VDivider
+            vertical
+            class="hidden-md-and-down"
+          />
 
           <!-- Right Column -->
           <VCol
@@ -90,6 +94,18 @@ export default {
                     variant="underlined"
                   />
                 </VCol>
+                
+                <VCol
+                  cols="12"
+                  md="6"
+                >
+                  <VCardTitle>No.HP</VCardTitle>
+                  <VTextField
+                    v-model="instancesData.phone"
+                    variant="underlined"
+                  />
+                </VCol>
+
                 <VCol
                   cols="12"
                   md="6"
@@ -97,16 +113,6 @@ export default {
                   <VCardTitle>Email</VCardTitle>
                   <VTextField
                     v-model="instancesData.email"
-                    variant="underlined"
-                  />
-                </VCol>
-                <VCol
-                  cols="12"
-                  md="6"
-                >
-                  <VCardTitle>Phone</VCardTitle>
-                  <VTextField
-                    v-model="instancesData.phone"
                     variant="underlined"
                   />
                 </VCol>

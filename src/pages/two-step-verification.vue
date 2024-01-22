@@ -81,7 +81,7 @@
           </VForm>
         </VCardText>
       </VCard>
-    </vcol>
+    </VCol>
   </VRow>
 </template>
 

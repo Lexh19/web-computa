@@ -50,41 +50,48 @@ const updateAction = async () => {
       </VText>
     </VCol>
 
-    <VCol cols="12">
+    <VCol
+      cols="12"
+      md="12"
+      lg="12"
+    >
       <VCard>
-        <Vcarditem>
-          <VCardTitle>Data Anggota</VCardTitle>
-        </Vcarditem>
-        <div class="pa-4 d-flex align-center">
-          <VImg
-            :max-width="100"
-            src="../src/assets/img/company-profil/Avatar.svg"
-          />
-          <div class="d-flex flex-column align-start">
-            <VCardItem>
-              <VRow>
-                <VCol cols="8">
-                  <VBtn        
-                    variant="flat"
-                    class="text-none flex-grow-1 "
-                  >
-                    Ganti foto profil   
-                  </VBtn>
-                </VCol>
-                <VCol cols="4">
-                  <VBtn
-                    class="text-none"
-                    color="secondary"
-                    variant="flat"
-                  >
-                    Reset
-                  </VBtn>
-                </VCol>
-              </VRow>
-            </VCardItem>
-            <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
+        <VCardItem class="pa-md-3">
+          <VCardTitle class="ml-3">
+            Data Anggota
+          </VCardTitle>
+        
+          <div class="pa-4 d-flex align-center d-sm-flex">
+            <VImg
+              :max-width="100"
+              src="../src/assets/img/company-profil/Avatar.svg"
+            />
+            <div class="d-flex flex-column align-start">
+              <VCardItem>
+                <VRow>
+                  <VCol cols="8">
+                    <VBtn        
+                      variant="flat"
+                      class="text-none flex-grow-1 "
+                    >
+                      Ganti foto profil   
+                    </VBtn>
+                  </VCol>
+                  <VCol cols="4">
+                    <VBtn
+                      class="text-none"
+                      color="secondary"
+                      variant="flat"
+                    >
+                      Reset
+                    </VBtn>
+                  </VCol>
+                </VRow>
+              </VCardItem>
+              <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
+            </div>
           </div>
-        </div>
+        </VCardItem>
 
         
         <VDivider />
