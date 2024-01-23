@@ -64,9 +64,7 @@ export default {
               </RouterLink>
             </VCardItem>
           </VCol>
-
-
-        
+          
           <VDivider
             vertical
             class="hidden-md-and-down"

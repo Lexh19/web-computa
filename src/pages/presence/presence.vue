@@ -151,6 +151,7 @@ watchEffect(async () => {
     </div>
 
     <!-- Presence Index -->
+    
     <VCol
       v-for="data in indexData"
       :key="data.id"
