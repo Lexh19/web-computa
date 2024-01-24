@@ -189,9 +189,12 @@ const updateAction = async () => {
               </VCol>
 
 
-              <div class="pa-md-3">
+              <VCardActions class="mt-2">
                 <VRow>
-                  <VCol cols="6">
+                  <VCol
+                    cols="6"
+                    sm="6"
+                  >
                     <VBtn
                       class="text-none"
                       color="primary"
@@ -202,7 +205,10 @@ const updateAction = async () => {
                     </VBtn>
                   </VCol>
 
-                  <VCol cols="6">
+                  <VCol
+                    cols="6"
+                    sm="6"
+                  >
                     <VBtn
                       class="text-none"
                       color="primary"
@@ -212,7 +218,7 @@ const updateAction = async () => {
                     </VBtn>
                   </VCol>
                 </VRow>
-              </div>
+              </VCardActions>
             </VRow>
           </VFrom>
         </VCardText>

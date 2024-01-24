@@ -136,10 +136,10 @@
                 <VTextField />
               </VCol>
 
-              <div class="pa-md-3">
+              <VCardActions class="mt-2">
                 <VRow>
                   <VCol
-                    cols="12"
+                    cols="6"
                     sm="6"
                   >
                     <VBtn
@@ -152,7 +152,7 @@
                   </VCol>
 
                   <VCol
-                    cols="12"
+                    cols="6"
                     sm="6"
                   >
                     <VBtn
@@ -164,7 +164,7 @@
                     </VBtn>
                   </VCol>
                 </VRow>
-              </div>
+              </VCardActions>
             </VRow>
           </VFrom>
         </VCardItem>

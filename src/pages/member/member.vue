@@ -82,8 +82,8 @@ watchEffect(async () => {
           </VCardText>
 
 
+          <!-- 👉 table head -->
           <VTable class="text-no-wrap pa-7">
-            <!-- 👉 table head -->
             <thead>
               <tr>
                 <th scope="col">

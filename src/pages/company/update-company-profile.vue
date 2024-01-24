@@ -59,7 +59,10 @@ const updateAction = async () => {
             <div class="d-flex flex-column align-start">
               <VCardItem>
                 <VRow>
-                  <VCol cols="6">
+                  <VCol
+                    cols="6"
+                    md="6"
+                  >
                     <VBtn
                       class="text-none"
                       color="primary"
@@ -67,7 +70,10 @@ const updateAction = async () => {
                       Ganti foto
                     </VBtn>
                   </VCol>
-                  <VCol cols="6">
+                  <VCol
+                    cols="6"
+                    md="6"
+                  >
                     <VBtn
                       class="text-none"
                       color="secondary"
@@ -139,11 +145,10 @@ const updateAction = async () => {
                   :rules="[requiredValidator]"
                 />
               </VCol>
-
-              <div class="pa-md-3">
+              <VCardActions class="mt-2">
                 <VRow>
                   <VCol
-                    cols="12"
+                    cols="6"
                     sm="6"
                   >
                     <VBtn
@@ -157,7 +162,7 @@ const updateAction = async () => {
                   </VCol>
 
                   <VCol
-                    cols="12"
+                    cols="6"
                     sm="6"
                   >
                     <VBtn
@@ -169,7 +174,7 @@ const updateAction = async () => {
                     </VBtn>
                   </VCol>
                 </VRow>
-              </div>
+              </VCardActions>
             </VRow>
           </VFrom>
         </VCardItem>
