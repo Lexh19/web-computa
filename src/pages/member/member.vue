@@ -3,10 +3,22 @@ import { watchEffect } from "vue"
 import { getlistmember } from "../../services/member-list"
 
 const listmember = ref([])
+const selectedItemsPerPage = ref(5)
+
+const formattedListMember = computed(() => {
+  const slicedData = listmember.value.slice(0, selectedItemsPerPage.value)
+
+  return slicedData.map((data, index) => {
+    const formattedIndex = (index + 1).toString().padStart(2, '0')
+
+    return { ...data, formattedIndex }
+  })
+})
 
 const loadpageData = async () =>{
   try{
     const response = await getlistmember()
+    
 
     listmember.value = response.data.data.data
     console.log("listmember", listmember.value)
@@ -25,7 +37,11 @@ watchEffect(async () => {
 <template>
   <section>
     <VRow>
-      <VCol cols="12">
+      <VCol
+        ols="12"
+        md="6"
+        lg="12"
+      >
         <VCard title="Daftar Anggota">
           <!-- 👉 Filters -->
 
@@ -35,9 +51,10 @@ watchEffect(async () => {
               style="width: 80px;"
             >
               <VSelect
+                v-model="selectedItemsPerPage"
                 density="compact"
                 variant="outlined"
-                :items="[10, 20, 30, 50]"
+                :items="[5, 10, 15, 25]"
               />
             </div>
 
@@ -65,7 +82,7 @@ watchEffect(async () => {
           </VCardText>
 
 
-          <VTable class="text-no-wrap  pa-md-3">
+          <VTable class="text-no-wrap  pa-7">
             <!-- 👉 table head -->
             <thead>
               <tr>
@@ -95,7 +112,7 @@ watchEffect(async () => {
 
             <!-- 👉 table body -->
             <tbody
-              v-for="data in listmember"
+              v-for="(data, index) in formattedListMember"
               :key="data.id"
             >
               <tr
@@ -105,7 +122,12 @@ watchEffect(async () => {
                 <td>
                   <div class="d-flex align-center">
                     <div class="d-flex flex-column">
-                      <h6 class="text-base" />
+                      <h1
+                        class="text-base"
+                        :style="{ color: 'rgba(39, 113, 216, 1)' }"
+                      >
+                        {{ data.formattedIndex }}
+                      </h1>
                     </div>
                   </div>
                 </td>
