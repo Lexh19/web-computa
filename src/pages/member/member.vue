@@ -82,7 +82,7 @@ watchEffect(async () => {
           </VCardText>
 
 
-          <VTable class="text-no-wrap  pa-7">
+          <VTable class="text-no-wrap pa-7">
             <!-- 👉 table head -->
             <thead>
               <tr>
@@ -237,9 +237,8 @@ watchEffect(async () => {
 </template>
 
 <style lang="scss">
-/* Tambahkan gaya berikut untuk garis samping dan bawah pada tabel */
 .text-no-wrap {
-  border-collapse: separate; /* Use 'separate' instead of 'collapse' */
+  border-collapse: separate;
   inline-size: 100%;
 }
 

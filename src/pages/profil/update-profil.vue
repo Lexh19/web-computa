@@ -69,7 +69,10 @@ const updateAction = async () => {
             <div class="d-flex flex-column align-start">
               <VCardItem>
                 <VRow>
-                  <VCol cols="8">
+                  <VCol
+                    cols="12"
+                    md="8"
+                  >
                     <VBtn        
                       variant="flat"
                       class="text-none flex-grow-1 "
@@ -77,7 +80,10 @@ const updateAction = async () => {
                       Ganti foto profil   
                     </VBtn>
                   </VCol>
-                  <VCol cols="4">
+                  <VCol
+                    cols="12"
+                    md="4"
+                  >
                     <VBtn
                       class="text-none"
                       color="secondary"
@@ -99,7 +105,10 @@ const updateAction = async () => {
         <VCardText>
           <VFrom @submit.prevent="() => {}">
             <VRow>
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                md="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Nama 
                 </div>
@@ -110,7 +119,10 @@ const updateAction = async () => {
               </VCol>
 
         
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                md="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   No. Pegawai
                 </div>
@@ -121,7 +133,10 @@ const updateAction = async () => {
               </VCol>
 
          
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                md="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Jabatan
                 </div>
@@ -132,7 +147,10 @@ const updateAction = async () => {
               </VCol>
         
 
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                md="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Pangkat
                 </div>
@@ -143,7 +161,10 @@ const updateAction = async () => {
               </VCol>
 
               
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                md="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   No. HP
                 </div>
@@ -154,7 +175,10 @@ const updateAction = async () => {
               </VCol>
         
 
-              <VCol cols="6">
+              <VCol
+                cols="12"
+                md="6"
+              >
                 <div class="text-subtitle-1 text-medium-emphasis">
                   Email
                 </div>
