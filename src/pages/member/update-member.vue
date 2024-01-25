@@ -32,29 +32,34 @@
               src="../src/assets/img/company-profil/Avatar.svg"
             />
             <div class="d-flex flex-column align-start">
-              <VCardItem>
-                <VRow>
-                  <VCol cols="8">
-                    <VBtn
-                      block
-                      class="text-none"
-                      color="primary"
-                      variant="outlined"
-                    >
-                      Upload foto baru    
-                    </VBtn>
-                  </VCol>
-                  <VCol cols="4">
-                    <VBtn
-                      class="text-none"
-                      color="secondary"
-                      variant="flat"
-                    >
-                      Reset
-                    </VBtn>
-                  </VCol>
-                </VRow>
-              </VCardItem>
+              <VRow class="ml-3 mt-2">
+                <VCol
+                  cols="8"
+                  md="8"
+                >
+                  <VBtn
+                    block
+                    class="text-none"
+                    color="primary"
+                    variant="outlined"
+                  >
+                    Upload foto baru    
+                  </VBtn>
+                </VCol>
+                <VCol
+                  cols="4"
+                  md="4"
+                >
+                  <VBtn
+                    class="text-none"
+                    color="secondary"
+                    variant="flat"
+                  >
+                    Reset
+                  </VBtn>
+                </VCol>
+              </VRow>
+            
               <VCardText>Uploud foto format jpg/png maks. 800kb</VCardText>
             </div>
           </div>

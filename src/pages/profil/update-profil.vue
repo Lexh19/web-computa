@@ -67,33 +67,32 @@ const updateAction = async () => {
               src="../src/assets/img/company-profil/Avatar.svg"
             />
             <div class="d-flex flex-column align-start">
-              <VCardItem>
-                <VRow>
-                  <VCol
-                    cols="12"
-                    md="8"
+              <VRow class="ml-3 mt-2">
+                <VCol
+                  cols="8"
+                  md="8"
+                >
+                  <VBtn        
+                    variant="flat"
+                    class="text-none flex-grow-1 "
                   >
-                    <VBtn        
-                      variant="flat"
-                      class="text-none flex-grow-1 "
-                    >
-                      Ganti foto profil   
-                    </VBtn>
-                  </VCol>
-                  <VCol
-                    cols="12"
-                    md="4"
+                    Ganti foto profil   
+                  </VBtn>
+                </VCol>
+                <VCol
+                  cols="4"
+                  md="4"
+                >
+                  <VBtn
+                    class="text-none"
+                    color="secondary"
+                    variant="flat"
                   >
-                    <VBtn
-                      class="text-none"
-                      color="secondary"
-                      variant="flat"
-                    >
-                      Reset
-                    </VBtn>
-                  </VCol>
-                </VRow>
-              </VCardItem>
+                    Reset
+                  </VBtn>
+                </VCol>
+              </VRow>
+             
               <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
             </div>
           </div>

@@ -51,39 +51,38 @@ const updateAction = async () => {
           <VCardTitle class="ml-3">
             Detail Profil Perusahaan
           </VCardTitle>
-          <div class="pa-4 d-flex align-center d-sm-flex">
+          <div class="pa-4 d-flex align-center d-sm-flex ">
             <VImg
               :max-width="100"
               src="../src/assets/img/company-profil/Avatar.svg"
             />
             <div class="d-flex flex-column align-start">
-              <VCardItem>
-                <VRow>
-                  <VCol
-                    cols="6"
-                    md="6"
+              <VRow class="ml-3 mt-2">
+                <VCol
+                  cols="6"
+                  md="6"
+                >
+                  <VBtn
+                    class="text-none"
+                    color="primary"
+                    variant="flat"
                   >
-                    <VBtn
-                      class="text-none"
-                      color="primary"
-                    >
-                      Ganti foto
-                    </VBtn>
-                  </VCol>
-                  <VCol
-                    cols="6"
-                    md="6"
+                    Ganti foto
+                  </VBtn>
+                </VCol>
+                <VCol
+                  cols="6"
+                  md="6"
+                >
+                  <VBtn
+                    class="text-none"
+                    color="secondary"
+                    variant="flat"
                   >
-                    <VBtn
-                      class="text-none"
-                      color="secondary"
-                      variant="flat"
-                    >
-                      Reset
-                    </VBtn>
-                  </VCol>
-                </VRow>
-              </VCardItem>
+                    Reset
+                  </VBtn>
+                </VCol>
+              </VRow>
               <VCardText>Hanya dapat ganti foto dengan file format JPG, GIF atau PNG. Maks ukuran 800K</VCardText>
             </div>
           </div>
