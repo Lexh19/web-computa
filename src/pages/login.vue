@@ -25,8 +25,6 @@ const loginAction = async () => {
   {
     console.log(error)
   }
-
-
 }
 </script>
 

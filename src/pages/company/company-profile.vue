@@ -50,8 +50,7 @@ export default {
               <VCardTitle class="text-center mt-3">
                 {{ instancesData.name }}
               </VCardTitle>
-
-   
+              
               <RouterLink :to="{ name: 'company-update-company-profile' }">
                 <VBtn
                   variant="flat"
